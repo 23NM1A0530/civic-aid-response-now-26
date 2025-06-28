@@ -12,6 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 import { ReportForm } from "@/components/ReportForm";
 import { LocationTracker } from "@/components/LocationTracker";
 import { EmergencyContacts } from "@/components/EmergencyContacts";
+import { EmergencySOS } from "@/components/EmergencySOS";
 
 const Index = () => {
   const [location, setLocation] = useState<{lat: number, lng: number} | null>(null);
@@ -59,6 +60,7 @@ const Index = () => {
 
           {/* Sidebar */}
           <div className="space-y-6">
+            <EmergencySOS />
             <LocationTracker 
               location={location} 
               setLocation={setLocation}
